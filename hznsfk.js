@@ -21,6 +21,8 @@ const {
     RUNTIME
 } = api;
 // set theme
+
+/*
 settings.theme = `
 .sk_theme {
     font-family: Input Sans Condensed, Charcoal, sans-serif;
@@ -58,6 +60,9 @@ settings.theme = `
 #sk_status, #sk_find {
     font-size: 20pt;
 }`;
+
+*/
+
 
 mapkey('yq', '#7Copy pre text', function () {
     Hints.create("pre", function (element) {
@@ -144,3 +149,12 @@ mapkey('gu', '#save url file', function() {
   // 模拟点击下载链接
   downloadLink.click();
 });
+
+
+addSearchAlias('p', 'duckduckgo', 'https://www.taobao.com/?q=', 's', 'https://duckduckgo.com/ac/?q=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
