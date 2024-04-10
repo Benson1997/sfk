@@ -22,8 +22,10 @@ const {
     RUNTIME
 } = api;
 
-api.unmap('<c>');
-api.unmap('<shift-s>');
+
+unmap('<shift-s>');
+unmapAllExcept(['c','R','T'], /google.com|youtube.com/);
+
 
 addSearchAlias('p', 'duckduckgo', 'https://duckduckgo.com/?q=', 's', 'https://duckduckgo.com/ac/?q=', function(response) {
     var res = JSON.parse(response.text);
