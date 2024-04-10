@@ -19,7 +19,8 @@ const {
     Front,
     Hints,
     Visual,
-    RUNTIME
+    RUNTIME,
+    unmapAllExcept
 } = api;
 
 
