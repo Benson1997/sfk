@@ -19,13 +19,12 @@ const {
     Front,
     Hints,
     Visual,
-    RUNTIME,
-    unmapAllExcept
+    RUNTIME
 } = api;
 
 
 unmap('<shift-s>');
-unmapAllExcept(['c','R','T'], /google.com|youtube.com/);
+unmap('<c>');
 
 
 addSearchAlias('p', 'duckduckgo', 'https://duckduckgo.com/?q=', 's', 'https://duckduckgo.com/ac/?q=', function(response) {
