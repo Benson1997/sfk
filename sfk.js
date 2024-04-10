@@ -23,8 +23,9 @@ const {
 } = api;
 
 
-unmap('<shift-s>');
 unmap('<c>');
+unmap('<shift-s>');
+
 
 
 addSearchAlias('p', 'duckduckgo', 'https://duckduckgo.com/?q=', 's', 'https://duckduckgo.com/ac/?q=', function(response) {
